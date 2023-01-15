@@ -1,11 +1,14 @@
 import React from "react";
-import Spinner from "../Spinner";
+import Spinner from "./Spinner/Spinner";
+
 const SearchBox = ({
   inputValue,
   onChange,
+  isLoading,
 }: {
   inputValue: string;
   onChange: (value: string) => void;
+  isLoading: boolean;
 }) => {
   const handleChange = (event: React.FormEvent<HTMLInputElement>) => {
     onChange(event.currentTarget.value);

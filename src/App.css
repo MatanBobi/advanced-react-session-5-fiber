@@ -100,3 +100,13 @@ h1 {
   right: 110px;
   bottom: 12px;
 }
+
+.search-box {
+  position: relative;
+}
+
+.search-box .input-spinner-loading {
+  position: absolute;
+  top: 10px;
+  right: 10%;
+}
