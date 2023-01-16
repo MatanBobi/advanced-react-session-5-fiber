@@ -8,7 +8,7 @@ const SearchBox = ({
 }: {
   inputValue: string;
   onChange: (value: string) => void;
-  isLoading: boolean;
+  isLoading?: boolean;
 }) => {
   const handleChange = (event: React.FormEvent<HTMLInputElement>) => {
     onChange(event.currentTarget.value);
