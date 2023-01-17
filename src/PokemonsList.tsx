@@ -13,13 +13,17 @@ const PokemonsList = ({ searchValue }: { searchValue: string }) => {
       });
   }, [setPokemons]);
 
+  const sortedPokemons = pokemons.sort((a, b) => {
+    return a.name > b.name ? 1 : -1;
+  });
+
   useEffect(() => {
     getPokemons();
   }, [getPokemons]);
 
   return (
     <div className="pokemons-list">
-      {pokemons.map((pokemon) => (
+      {sortedPokemons.map((pokemon) => (
         <PokemonItem
           name={pokemon.name}
           searchValue={searchValue}
